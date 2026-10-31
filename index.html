@@ -1,0 +1,1828 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAS Sejarah XI - SMAS Al-Hilaal Tehoru</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            800: '#1e293b',
+                            900: '#0f172a',
+                            950: '#080d1a',
+                        },
+                        gold: {
+                            300: '#fde047',
+                            400: '#facc15',
+                            500: '#eab308',
+                            600: '#d97706',
+                            700: '#b45309',
+                            800: '#92400e',
+                        },
+                        parchment: '#fdfbf7',
+                        parchmentDark: '#f4efe6'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                        cinzel: ['Cinzel', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom Background Pattern & History Aesthetic */
+        body {
+            background-color: #0f172a;
+            color: #1e293b;
+            font-family: 'Inter', sans-serif;
+            background-image: 
+                radial-gradient(circle at 50% 0%, rgba(217, 119, 6, 0.15), transparent 70%),
+                radial-gradient(circle at 0% 100%, rgba(15, 23, 42, 0.95), rgba(8, 13, 26, 0.98)),
+                url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            background-attachment: fixed;
+        }
+
+        .parchment-card {
+            background: #fdfbf7;
+            background-image: radial-gradient(#e5e0d8 0.75px, transparent 0.75px);
+            background-size: 16px 16px;
+            box-shadow: 0 20px 25px -5px rgba(0,0,0,0.5), 0 8px 10px -6px rgba(0,0,0,0.5), inset 0 0 80px rgba(180, 83, 9, 0.05);
+        }
+
+        .gold-border {
+            border: 2px solid #d97706;
+            box-shadow: 0 0 15px rgba(217, 119, 6, 0.2);
+        }
+
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #fef08a 0%, #facc15 50%, #d97706 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .gold-button {
+            background: linear-gradient(135deg, #d97706 0%, #b45309 100%);
+            color: #ffffff;
+            transition: all 0.3s ease;
+        }
+        .gold-button:hover {
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+            box-shadow: 0 0 20px rgba(217, 119, 6, 0.5);
+            transform: translateY(-1px);
+        }
+
+        /* Certificate Print CSS */
+        @media print {
+            body * {
+                visibility: hidden;
+            }
+            #certificate-print-area, #certificate-print-area * {
+                visibility: visible;
+            }
+            #certificate-print-area {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                margin: 0;
+                padding: 0;
+                box-shadow: none !important;
+            }
+            .no-print {
+                display: none !important;
+            }
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0f172a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #d97706;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="min-h-screen text-slate-800 flex flex-col justify-between">
+
+    <!-- HEADER / NAVBAR -->
+    <header class="no-print bg-navy-950/90 border-b border-gold-600/30 backdrop-blur-md sticky top-0 z-50 px-4 py-3 shadow-lg">
+        <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-4">
+            <div class="flex items-center space-x-3 cursor-pointer" onclick="switchPage('beranda')">
+                <div class="w-10 h-10 rounded-full bg-gradient-to-br from-gold-500 to-gold-700 flex items-center justify-center text-navy-950 font-bold text-xl shadow-md">
+                    <i class="fa-solid font-cinzel">S</i>
+                </div>
+                <div>
+                    <h1 class="font-cinzel text-lg md:text-xl font-bold gold-gradient-text tracking-wide">SAS SEJARAH XI</h1>
+                    <p class="text-xs text-amber-200/80 font-medium">SMAS Al-Hilaal Tehoru • Fase F</p>
+                </div>
+            </div>
+
+            <!-- Navigation Links -->
+            <nav class="flex items-center space-x-2 md:space-x-4 text-xs md:text-sm">
+                <button onclick="switchPage('beranda')" class="px-3 py-1.5 rounded-lg text-slate-200 hover:text-gold-400 hover:bg-slate-800/60 transition"><i class="fa-solid fa-house mr-1.5"></i>Beranda</button>
+                <button onclick="switchPage('petunjuk')" class="px-3 py-1.5 rounded-lg text-slate-200 hover:text-gold-400 hover:bg-slate-800/60 transition"><i class="fa-solid fa-circle-info mr-1.5"></i>Petunjuk</button>
+                <button onclick="switchPage('sertifikat-search')" class="px-3 py-1.5 rounded-lg text-slate-200 hover:text-gold-400 hover:bg-slate-800/60 transition"><i class="fa-solid fa-award mr-1.5"></i>Sertifikat</button>
+                <button onclick="openGuruAuthModal()" class="px-3 py-1.5 rounded-lg bg-gold-600/20 border border-gold-500/40 text-gold-300 hover:bg-gold-600 hover:text-white transition font-medium"><i class="fa-solid fa-user-tie mr-1.5"></i>Dashboard Guru</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT CONTAINER -->
+    <main class="flex-grow max-w-7xl w-full mx-auto p-4 md:p-6">
+        
+        <!-- ==================== 1. PAGE: BERANDA ==================== -->
+        <section id="page-beranda" class="space-y-8 animate-fadeIn">
+            <!-- Hero Card -->
+            <div class="parchment-card rounded-2xl p-6 md:p-10 border-2 border-gold-600/40 text-center relative overflow-hidden shadow-2xl">
+                <!-- Historical Background Watermark Icon -->
+                <div class="absolute -right-10 -bottom-10 opacity-5 pointer-events-none text-navy-900 text-[220px]">
+                    <i class="fa-solid fa-scroll"></i>
+                </div>
+                
+                <span class="inline-block bg-navy-900 text-gold-400 text-xs font-semibold px-4 py-1.5 rounded-full uppercase tracking-widest mb-4 border border-gold-500/30">
+                    Asesmen Sumatif Akhir Semester (SAS) • Kurikulum Merdeka
+                </span>
+
+                <h2 class="font-cinzel text-2xl md:text-4xl font-extrabold text-navy-900 mb-3 tracking-tight">
+                    APLIKASI ASESMEN SUMATIF AKHIR SEMESTER SEJARAH
+                </h2>
+                <p class="font-serif italic text-amber-900 text-lg md:text-xl max-w-2xl mx-auto mb-6">
+                    “Menguji Kemampuan Berpikir Kritis melalui Sumber Sejarah”
+                </p>
+
+                <!-- Identity Badge -->
+                <div class="inline-flex flex-col md:flex-row items-center justify-center gap-2 md:gap-6 bg-navy-900/5 p-4 rounded-xl border border-navy-900/10 mb-8 max-w-xl mx-auto text-sm text-slate-700">
+                    <div><i class="fa-solid fa-user-pen text-gold-700 mr-2"></i>Disusun oleh: <strong>Acifah Hatapayo, S.Pd., Gr.</strong></div>
+                    <div class="hidden md:block text-slate-400">•</div>
+                    <div><i class="fa-solid fa-school text-gold-700 mr-2"></i><strong>SMAS Al-Hilaal Tehoru</strong></div>
+                </div>
+
+                <!-- Info Grid -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto mb-8 text-left">
+                    <div class="bg-white/80 p-3.5 rounded-lg border border-amber-200">
+                        <div class="text-xs text-slate-500 uppercase font-bold">Mata Pelajaran</div>
+                        <div class="text-sm font-semibold text-navy-900">Sejarah (Fase F)</div>
+                    </div>
+                    <div class="bg-white/80 p-3.5 rounded-lg border border-amber-200">
+                        <div class="text-xs text-slate-500 uppercase font-bold">Kelas / Kelas</div>
+                        <div class="text-sm font-semibold text-navy-900">XI (Tingkat SMA)</div>
+                    </div>
+                    <div class="bg-white/80 p-3.5 rounded-lg border border-amber-200">
+                        <div class="text-xs text-slate-500 uppercase font-bold">Jumlah Soal</div>
+                        <div class="text-sm font-semibold text-navy-900">20 PG + 5 Esai</div>
+                    </div>
+                    <div class="bg-white/80 p-3.5 rounded-lg border border-amber-200">
+                        <div class="text-xs text-slate-500 uppercase font-bold">Alokasi Waktu</div>
+                        <div class="text-sm font-semibold text-navy-900" id="beranda-durasi-label">90 Menit</div>
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="flex flex-wrap justify-center gap-4">
+                    <button onclick="switchPage('identitas')" class="gold-button px-8 py-3.5 rounded-xl font-semibold shadow-lg text-base flex items-center">
+                        <i class="fa-solid fa-pen-to-square mr-2.5"></i> Mulai Asesmen
+                    </button>
+                    <button onclick="switchPage('petunjuk')" class="bg-navy-900 text-amber-100 hover:bg-navy-800 px-6 py-3.5 rounded-xl font-medium border border-gold-500/30 transition flex items-center">
+                        <i class="fa-solid fa-book-open mr-2.5"></i> Petunjuk Pengerjaan
+                    </button>
+                    <button onclick="openGuruAuthModal()" class="bg-slate-200 hover:bg-slate-300 text-slate-800 px-6 py-3.5 rounded-xl font-medium transition flex items-center">
+                        <i class="fa-solid fa-lock mr-2.5"></i> Masuk Guru
+                    </button>
+                    <button onclick="switchPage('sertifikat-search')" class="bg-emerald-700 hover:bg-emerald-800 text-white px-6 py-3.5 rounded-xl font-medium transition flex items-center">
+                        <i class="fa-solid fa-certificate mr-2.5"></i> Lihat Sertifikat
+                    </button>
+                </div>
+            </div>
+
+            <!-- Scope of Topics Banner -->
+            <div class="bg-navy-950/80 border border-gold-600/30 rounded-2xl p-6 text-slate-200">
+                <h3 class="font-cinzel text-lg font-bold text-gold-400 mb-3 flex items-center">
+                    <i class="fa-solid fa-landmark mr-2.5"></i> Cakupan Materi Utama (HOTS)
+                </h3>
+                <p class="text-sm text-slate-300 mb-4">
+                    Asesmen ini menguji kemampuan analisis (C4), evaluasi (C5), dan kreasi (C6) dalam Konsep Dasar Ilmu Sejarah:
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-xs">
+                    <div class="bg-slate-900/60 p-3 rounded-lg border border-slate-700/60">
+                        <span class="text-gold-400 font-bold block mb-1">1. Sumber & Jenis Sejarah</span>
+                        Klasifikasi sumber primer, sekunder, lisan, benda, visual, dan kritik eksternal/internal.
+                    </div>
+                    <div class="bg-slate-900/60 p-3 rounded-lg border border-slate-700/60">
+                        <span class="text-gold-400 font-bold block mb-1">2. Interpretasi & Bias</span>
+                        Triangulasi bukti, mengatasi kesenjangan fakta, membedakan fakta dan duga pendapat.
+                    </div>
+                    <div class="bg-slate-900/60 p-3 rounded-lg border border-slate-700/60">
+                        <span class="text-gold-400 font-bold block mb-1">3. Rekonstruksi & Etika</span>
+                        Tahapan heuristik hingga historiografi serta etika menghargai kesaksian narasumber.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== 2. PAGE: IDENTITAS PESERTA ==================== -->
+        <section id="page-identitas" class="hidden max-w-2xl mx-auto animate-fadeIn">
+            <div class="parchment-card rounded-2xl p-6 md:p-8 border-2 border-gold-600/40 shadow-2xl">
+                <div class="text-center mb-6">
+                    <div class="w-12 h-12 bg-navy-900 text-gold-400 rounded-full flex items-center justify-center mx-auto mb-3 text-xl font-bold">
+                        <i class="fa-solid fa-user-graduate"></i>
+                    </div>
+                    <h3 class="font-cinzel text-2xl font-bold text-navy-900">Formulir Data Peserta Didik</h3>
+                    <p class="text-xs text-slate-600 mt-1">Harap isi data dengan lengkap dan teliti sebelum memulai asesmen.</p>
+                </div>
+
+                <form id="form-identitas" onsubmit="handleStartExam(event)" class="space-y-4">
+                    <div>
+                        <label class="block text-xs font-bold uppercase text-slate-700 mb-1">Nama Lengkap Peserta *</label>
+                        <input type="text" id="input-nama" required placeholder="Contoh: Ahmad Abdullah" 
+                            class="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-gold-500 bg-white text-sm">
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-bold uppercase text-slate-700 mb-1">Nomor Peserta / NIS *</label>
+                            <input type="text" id="input-nis" required placeholder="Contoh: 202611001" 
+                                class="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-gold-500 bg-white text-sm">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold uppercase text-slate-700 mb-1">Kelas *</label>
+                            <select id="input-kelas" required class="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-gold-500 bg-white text-sm">
+                                <option value="">-- Pilih Kelas --</option>
+                                <option value="XI IPA 1">XI IPA 1</option>
+                                <option value="XI IPA 2">XI IPA 2</option>
+                                <option value="XI IPS 1">XI IPS 1</option>
+                                <option value="XI IPS 2">XI IPS 2</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-bold uppercase text-slate-700 mb-1">Semester</label>
+                            <input type="text" id="input-semester" value="Ganjil" readonly 
+                                class="w-full px-4 py-2.5 rounded-lg border border-slate-200 bg-slate-100 text-slate-600 text-sm font-medium">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold uppercase text-slate-700 mb-1">Tahun Pelajaran</label>
+                            <input type="text" id="input-tapel" value="2026/2027" readonly 
+                                class="w-full px-4 py-2.5 rounded-lg border border-slate-200 bg-slate-100 text-slate-600 text-sm font-medium">
+                        </div>
+                    </div>
+
+                    <div class="pt-4 flex gap-3">
+                        <button type="button" onclick="switchPage('beranda')" class="w-1/3 px-4 py-3 rounded-xl border border-slate-300 font-semibold text-slate-700 hover:bg-slate-100 text-sm">
+                            Batal
+                        </button>
+                        <button type="submit" class="w-2/3 gold-button py-3 rounded-xl font-bold shadow-md text-sm flex items-center justify-center">
+                            Lanjut & Mulai Ujian <i class="fa-solid fa-arrow-right ml-2"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- ==================== 3. PAGE: PETUNJUK PENGERJAAN ==================== -->
+        <section id="page-petunjuk" class="hidden max-w-3xl mx-auto animate-fadeIn">
+            <div class="parchment-card rounded-2xl p-6 md:p-8 border-2 border-gold-600/40 shadow-2xl">
+                <div class="flex items-center space-x-3 border-b border-amber-900/20 pb-4 mb-6">
+                    <i class="fa-solid fa-clipboard-list text-gold-700 text-2xl"></i>
+                    <div>
+                        <h3 class="font-cinzel text-xl font-bold text-navy-900">Petunjuk Pengerjaan Asesmen</h3>
+                        <p class="text-xs text-slate-600">Bacalah dengan saksama seluruh aturan sebelum memulai.</p>
+                    </div>
+                </div>
+
+                <div class="space-y-4 text-sm text-slate-800 leading-relaxed">
+                    <div class="flex items-start space-x-3 bg-white/70 p-3 rounded-lg border border-amber-200">
+                        <span class="bg-navy-900 text-gold-400 font-bold w-6 h-6 rounded-full flex items-center justify-center text-xs flex-shrink-0 mt-0.5">1</span>
+                        <div>
+                            <strong>Komposisi Soal & Bobot Nilai:</strong>
+                            <p class="text-xs text-slate-600 mt-0.5">Asesmen terdiri dari <strong>20 Soal Pilihan Ganda</strong> (bobot 60%) dan <strong>5 Soal Esai HOTS</strong> (bobot 40%). Total skor maksimal adalah 100 poin.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start space-x-3 bg-white/70 p-3 rounded-lg border border-amber-200">
+                        <span class="bg-navy-900 text-gold-400 font-bold w-6 h-6 rounded-full flex items-center justify-center text-xs flex-shrink-0 mt-0.5">2</span>
+                        <div>
+                            <strong>Alokasi Waktu:</strong>
+                            <p class="text-xs text-slate-600 mt-0.5">Waktu ujian adalah <strong>90 menit</strong>. Penghitung waktu otomatis akan berjalan begitu tombol 'Mulai Ujian' diklik. Sistem akan mengirim otomatis saat waktu habis.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start space-x-3 bg-white/70 p-3 rounded-lg border border-amber-200">
+                        <span class="bg-navy-900 text-gold-400 font-bold w-6 h-6 rounded-full flex items-center justify-center text-xs flex-shrink-0 mt-0.5">3</span>
+                        <div>
+                            <strong>Navigasi & Fitur Ragu-ragu:</strong>
+                            <p class="text-xs text-slate-600 mt-0.5">Anda dapat berpindah antarsoal menggunakan panel nomor. Gunakan tombol <em>"Tandai Ragu-Ragu"</em> untuk menandai soal yang ingin ditinjau kembali.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start space-x-3 bg-white/70 p-3 rounded-lg border border-amber-200">
+                        <span class="bg-navy-900 text-gold-400 font-bold w-6 h-6 rounded-full flex items-center justify-center text-xs flex-shrink-0 mt-0.5">4</span>
+                        <div>
+                            <strong>Pemeriksaan & Sertifikat:</strong>
+                            <p class="text-xs text-slate-600 mt-0.5">Pilihan Ganda dinilai langsung secara otomatis. Jawaban Esai akan diperiksa manual oleh Ibu Acifah Hatapayo, S.Pd., Gr. Sertifikat dapat diterbitkan setelah nilai disahkan.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-8 text-center">
+                    <button onclick="switchPage('identitas')" class="gold-button px-8 py-3 rounded-xl font-bold shadow-md">
+                        Saya Mengerti, Lanjut ke Pengisian Data
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== 4. PAGE: HALAMAN UJIAN INTERAKTIF ==================== -->
+        <section id="page-ujian" class="hidden space-y-4 animate-fadeIn">
+            <!-- Top Exam Header Bar -->
+            <div class="bg-navy-950/90 border border-gold-600/30 rounded-xl p-4 text-white flex flex-wrap items-center justify-between gap-4 shadow-xl">
+                <div class="flex items-center space-x-3">
+                    <div class="text-amber-400 font-bold text-sm">
+                        <i class="fa-solid fa-user-circle mr-1.5"></i> <span id="exam-user-name">Peserta Ujian</span>
+                    </div>
+                    <span class="text-slate-500">|</span>
+                    <div class="text-slate-300 text-xs" id="exam-user-nis">NIS: -</div>
+                </div>
+
+                <!-- Timer -->
+                <div class="bg-slate-900 px-4 py-2 rounded-lg border border-gold-500/40 flex items-center space-x-2">
+                    <i class="fa-solid fa-stopwatch text-gold-400 animate-pulse"></i>
+                    <span class="text-xs text-slate-400 uppercase font-semibold">Sisa Waktu:</span>
+                    <span id="exam-timer" class="font-mono text-lg font-bold text-gold-400">90:00</span>
+                </div>
+
+                <button onclick="confirmFinishExam()" class="bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold px-4 py-2 rounded-lg transition flex items-center">
+                    <i class="fa-solid fa-paper-plane mr-1.5"></i> Selesaikan Ujian
+                </button>
+            </div>
+
+            <!-- Exam Layout Container -->
+            <div class="grid grid-cols-1 lg:grid-cols-4 gap-6">
+                <!-- Left/Center: Question Box (3 Cols) -->
+                <div class="lg:col-span-3 space-y-4">
+                    <div class="parchment-card rounded-2xl p-6 md:p-8 border border-gold-600/30 min-h-[420px] flex flex-col justify-between shadow-xl">
+                        <div>
+                            <!-- Question Header -->
+                            <div class="flex justify-between items-center border-b border-amber-900/15 pb-3 mb-4">
+                                <span class="bg-navy-900 text-gold-400 text-xs font-bold px-3 py-1 rounded-md" id="question-number-badge">
+                                    Soal Nomor 1
+                                </span>
+                                <span class="text-xs text-amber-800 font-semibold" id="question-type-badge">
+                                    Pilihan Ganda (HOTS C4)
+                                </span>
+                            </div>
+
+                            <!-- Question Stem -->
+                            <div id="question-text" class="text-slate-900 font-medium text-base md:text-lg leading-relaxed mb-6">
+                                <!-- Question content populated by JS -->
+                            </div>
+
+                            <!-- Options or Essay Textarea Container -->
+                            <div id="answers-container" class="space-y-3">
+                                <!-- Populated dynamically -->
+                            </div>
+                        </div>
+
+                        <!-- Footer Navigation Buttons -->
+                        <div class="flex flex-wrap items-center justify-between gap-3 border-t border-amber-900/15 pt-4 mt-6">
+                            <button id="btn-prev-question" onclick="navigateQuestion(-1)" class="px-4 py-2 rounded-lg border border-slate-300 text-slate-700 font-medium text-sm hover:bg-amber-100/50 disabled:opacity-40">
+                                <i class="fa-solid fa-chevron-left mr-1.5"></i> Sebelumnya
+                            </button>
+
+                            <label class="inline-flex items-center space-x-2 text-xs font-semibold text-amber-900 cursor-pointer select-none bg-amber-100/60 px-3 py-2 rounded-lg border border-amber-300">
+                                <input type="checkbox" id="chk-flag-question" onchange="toggleFlagCurrentQuestion()" class="rounded text-amber-600 focus:ring-amber-500 w-4 h-4">
+                                <span><i class="fa-solid fa-flag text-amber-600 mr-1"></i> Tandai Ragu-Ragu</span>
+                            </label>
+
+                            <button id="btn-next-question" onclick="navigateQuestion(1)" class="gold-button px-5 py-2 rounded-lg font-bold text-sm">
+                                Berikutnya <i class="fa-solid fa-chevron-right ml-1.5"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Question Palette / Navigation (1 Col) -->
+                <div class="space-y-4">
+                    <div class="bg-navy-950 border border-gold-600/30 rounded-2xl p-4 text-white shadow-xl">
+                        <h4 class="font-cinzel text-sm font-bold text-gold-400 mb-3 flex items-center justify-between">
+                            <span><i class="fa-solid fa-grid-2 mr-2"></i> Navigasi Soal</span>
+                            <span class="text-xs text-slate-400 font-normal">Total: 25</span>
+                        </h4>
+
+                        <!-- Legend -->
+                        <div class="grid grid-cols-3 gap-1 text-[10px] text-slate-300 mb-4 text-center">
+                            <div class="flex items-center space-x-1"><span class="w-3 h-3 bg-emerald-600 rounded"></span><span>Dijawab</span></div>
+                            <div class="flex items-center space-x-1"><span class="w-3 h-3 bg-amber-500 rounded"></span><span>Ragu</span></div>
+                            <div class="flex items-center space-x-1"><span class="w-3 h-3 bg-slate-700 rounded"></span><span>Belum</span></div>
+                        </div>
+
+                        <!-- Buttons Grid -->
+                        <div class="text-xs font-bold text-slate-400 mb-1">Pilihan Ganda (1 - 20)</div>
+                        <div class="grid grid-cols-5 gap-2 mb-4" id="grid-pg-nav">
+                            <!-- PG Buttons -->
+                        </div>
+
+                        <div class="text-xs font-bold text-slate-400 mb-1">Soal Esai (21 - 25)</div>
+                        <div class="grid grid-cols-5 gap-2" id="grid-essay-nav">
+                            <!-- Essay Buttons -->
+                        </div>
+
+                        <div class="mt-6 pt-4 border-t border-slate-800">
+                            <button onclick="confirmFinishExam()" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2.5 rounded-lg text-xs transition">
+                                Selesai & Kumpulkan Jawaban
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== 5. PAGE: HASIL ASESMEN PESERTA ==================== -->
+        <section id="page-hasil" class="hidden max-w-3xl mx-auto animate-fadeIn">
+            <div class="parchment-card rounded-2xl p-6 md:p-8 border-2 border-gold-600/40 shadow-2xl text-center">
+                <div class="w-16 h-16 bg-gradient-to-br from-gold-500 to-gold-700 text-navy-950 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-extrabold shadow-lg">
+                    <i class="fa-solid fa-circle-check"></i>
+                </div>
+
+                <h3 class="font-cinzel text-2xl md:text-3xl font-extrabold text-navy-900 mb-1">Asesmen Telah Diselesaikan</h3>
+                <p class="text-xs text-slate-600 mb-6">Terima kasih atas partisipasi Anda dalam SAS Sejarah XI SMAS Al-Hilaal Tehoru.</p>
+
+                <!-- Student Info Card -->
+                <div class="bg-white/80 rounded-xl p-4 border border-amber-200 text-left max-w-md mx-auto mb-6 text-xs space-y-1">
+                    <div class="flex justify-between"><span class="text-slate-500">Nama Peserta:</span><span class="font-bold text-navy-900" id="res-nama">-</span></div>
+                    <div class="flex justify-between"><span class="text-slate-500">NIS / Kelas:</span><span class="font-bold text-navy-900" id="res-nis-kelas">-</span></div>
+                    <div class="flex justify-between"><span class="text-slate-500">Waktu Selesai:</span><span class="font-medium text-slate-700" id="res-waktu">-</span></div>
+                </div>
+
+                <!-- Score Summary Box -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                    <div class="bg-navy-900 text-white p-4 rounded-xl border border-gold-500/30">
+                        <div class="text-[11px] text-amber-300 uppercase font-bold">Skor Pilihan Ganda</div>
+                        <div class="text-3xl font-black text-gold-400 my-1" id="res-skor-pg">0</div>
+                        <div class="text-[10px] text-slate-400">Otomatis Terkoreksi (Maks 60)</div>
+                    </div>
+                    <div class="bg-navy-900 text-white p-4 rounded-xl border border-gold-500/30">
+                        <div class="text-[11px] text-amber-300 uppercase font-bold">Status Jawaban Esai</div>
+                        <div class="text-sm font-bold text-amber-200 my-2" id="res-status-esai">Menunggu Verifikasi Guru</div>
+                        <div class="text-[10px] text-slate-400">Maksimal 40 Poin</div>
+                    </div>
+                    <div class="bg-navy-900 text-white p-4 rounded-xl border border-gold-500/30">
+                        <div class="text-[11px] text-amber-300 uppercase font-bold">Estimasi Nilai Sementara</div>
+                        <div class="text-3xl font-black text-gold-400 my-1" id="res-skor-total">0</div>
+                        <div class="text-[10px] text-slate-400">Akan difinalisasi oleh Guru</div>
+                    </div>
+                </div>
+
+                <div class="bg-amber-50 text-amber-900 p-4 rounded-xl border border-amber-200 text-xs text-left mb-6 leading-relaxed">
+                    <i class="fa-solid fa-circle-info text-amber-600 mr-1.5"></i>
+                    <strong>Informasi Penerbitan Sertifikat:</strong> Jawaban esai Anda saat ini tersimpan di sistem. Setelah Ibu Acifah Hatapayo, S.Pd., Gr. memeriksa esai dan mengesahkan nilai akhir Anda, Anda dapat mengunduh atau mencetak <strong>Sertifikat Hasil Asesmen</strong> melalui menu utama.
+                </div>
+
+                <div class="flex flex-wrap justify-center gap-3">
+                    <button onclick="switchPage('beranda')" class="gold-button px-6 py-2.5 rounded-xl font-bold text-sm">
+                        Kembali ke Beranda
+                    </button>
+                    <button onclick="switchPage('sertifikat-search')" class="bg-navy-900 text-amber-200 hover:bg-navy-800 px-6 py-2.5 rounded-xl font-medium text-sm">
+                        Cek Status Sertifikat
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== 6. PAGE: DASHBOARD GURU ==================== -->
+        <section id="page-guru-dashboard" class="hidden space-y-6 animate-fadeIn">
+            <!-- Header Bar -->
+            <div class="bg-navy-950 border border-gold-600/30 rounded-2xl p-6 text-white flex flex-wrap items-center justify-between gap-4 shadow-xl">
+                <div>
+                    <h3 class="font-cinzel text-xl md:text-2xl font-bold gold-gradient-text">DASHBOARD AMINISTRASI GURU</h3>
+                    <p class="text-xs text-amber-200/80">Pengelolaan Asesmen, Verifikasi Esai & Analisis SAS Sejarah XI</p>
+                </div>
+                <div class="flex items-center space-x-3">
+                    <button onclick="logoutGuru()" class="bg-rose-600/30 border border-rose-500/40 text-rose-200 hover:bg-rose-600 hover:text-white text-xs font-semibold px-4 py-2 rounded-lg transition">
+                        <i class="fa-solid fa-right-from-bracket mr-1"></i> Keluar
+                    </button>
+                </div>
+            </div>
+
+            <!-- Dashboard Navigation Tabs -->
+            <div class="flex border-b border-slate-700 space-x-2 text-xs md:text-sm">
+                <button onclick="switchGuruTab('rekap')" id="tab-btn-rekap" class="px-4 py-2.5 font-bold rounded-t-lg bg-gold-600 text-white">
+                    <i class="fa-solid fa-table mr-1.5"></i> Rekap Hasil & Koreksi Esai
+                </button>
+                <button onclick="switchGuruTab('analisis')" id="tab-btn-analisis" class="px-4 py-2.5 font-semibold text-slate-300 hover:text-white">
+                    <i class="fa-solid fa-chart-column mr-1.5"></i> Analisis Butir Soal
+                </button>
+                <button onclick="switchGuruTab('pengaturan')" id="tab-btn-pengaturan" class="px-4 py-2.5 font-semibold text-slate-300 hover:text-white">
+                    <i class="fa-solid fa-sliders mr-1.5"></i> Pengaturan Ujian
+                </button>
+                <button onclick="switchGuruTab('kunci')" id="tab-btn-kunci" class="px-4 py-2.5 font-semibold text-slate-300 hover:text-white">
+                    <i class="fa-solid fa-key mr-1.5"></i> Kunci & Pembahasan HOTS
+                </button>
+            </div>
+
+            <!-- TAB 1: REKAP HASIL & KOREKSI -->
+            <div id="guru-tab-rekap" class="space-y-4">
+                <div class="bg-navy-900 border border-slate-800 rounded-xl p-4 flex flex-wrap justify-between items-center gap-3">
+                    <span class="text-xs text-slate-300">Total Peserta Terdaftar: <strong class="text-gold-400 font-bold" id="dash-total-siswa">0</strong></span>
+                    <div class="flex space-x-2">
+                        <button onclick="exportToCSV()" class="bg-emerald-700 hover:bg-emerald-800 text-white text-xs font-bold px-3 py-2 rounded-lg transition">
+                            <i class="fa-solid fa-file-excel mr-1"></i> Ekspor CSV / Excel
+                        </button>
+                        <button onclick="window.print()" class="bg-slate-700 hover:bg-slate-600 text-white text-xs font-bold px-3 py-2 rounded-lg transition">
+                            <i class="fa-solid fa-print mr-1"></i> Cetak Rekap
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Student Table -->
+                <div class="bg-white rounded-xl shadow-xl overflow-x-auto border border-slate-200">
+                    <table class="w-full text-left border-collapse text-xs md:text-sm">
+                        <thead>
+                            <tr class="bg-navy-950 text-amber-300 uppercase font-semibold text-[11px] border-b border-gold-600/30">
+                                <th class="p-3">#</th>
+                                <th class="p-3">Nama Peserta</th>
+                                <th class="p-3">NIS / Kelas</th>
+                                <th class="p-3 text-center">PG (60)</th>
+                                <th class="p-3 text-center">Esai (40)</th>
+                                <th class="p-3 text-center">Nilai Akhir</th>
+                                <th class="p-3 text-center">Status</th>
+                                <th class="p-3 text-center">Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbl-body-rekap" class="divide-y divide-slate-200">
+                            <!-- Populated dynamically -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- TAB 2: ANALISIS BUTIR SOAL -->
+            <div id="guru-tab-analisis" class="hidden space-y-6">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div class="parchment-card p-4 rounded-xl border border-amber-300">
+                        <div class="text-xs text-slate-500 uppercase font-bold">Rata-Rata Nilai Kelas</div>
+                        <div class="text-3xl font-black text-navy-900 my-1" id="stat-rata-rata">0.0</div>
+                        <div class="text-[10px] text-slate-600">Berdasarkan data terkumpul</div>
+                    </div>
+                    <div class="parchment-card p-4 rounded-xl border border-amber-300">
+                        <div class="text-xs text-slate-500 uppercase font-bold">Tingkat Ketuntasan (>= <span id="stat-kkm-lbl">75</span>)</div>
+                        <div class="text-3xl font-black text-emerald-700 my-1" id="stat-persen-tuntas">0%</div>
+                        <div class="text-[10px] text-slate-600">Memenuhi ambang sertifikat</div>
+                    </div>
+                    <div class="parchment-card p-4 rounded-xl border border-amber-300">
+                        <div class="text-xs text-slate-500 uppercase font-bold">Soal Paling Menantang</div>
+                        <div class="text-lg font-bold text-rose-700 my-1" id="stat-soal-tersulit">Soal #0</div>
+                        <div class="text-[10px] text-slate-600">Persentase salah tertinggi</div>
+                    </div>
+                </div>
+
+                <div class="bg-navy-950 border border-slate-800 rounded-xl p-6 text-white">
+                    <h4 class="font-cinzel text-base font-bold text-gold-400 mb-4">Analisis Tingkat Kebenaran Pilihan Ganda (20 Soal)</h4>
+                    <div class="space-y-3 text-xs" id="container-analisis-soal">
+                        <!-- Populated dynamically -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB 3: PENGATURAN UJIAN -->
+            <div id="guru-tab-pengaturan" class="hidden max-w-2xl">
+                <div class="parchment-card p-6 rounded-2xl border border-gold-600/30 space-y-4 shadow-xl">
+                    <h4 class="font-cinzel text-lg font-bold text-navy-900 border-b pb-2">Konfigurasi Parameter Ujian</h4>
+                    
+                    <div>
+                        <label class="block text-xs font-bold uppercase text-slate-700 mb-1">Durasi Ujian (Menit)</label>
+                        <input type="number" id="setting-durasi" value="90" class="w-full px-3 py-2 border rounded-lg text-sm">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold uppercase text-slate-700 mb-1">Ambang Batas Nilai Sertifikat (KKM)</label>
+                        <input type="number" id="setting-kkm" value="75" class="w-full px-3 py-2 border rounded-lg text-sm">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold uppercase text-slate-700 mb-1">Aturan Penerbitan Sertifikat</label>
+                        <select id="setting-cert-rule" class="w-full px-3 py-2 border rounded-lg text-sm bg-white">
+                            <option value="kkm">Hanya Peserta Lulus KKM (>= Ambang)</option>
+                            <option value="all">Seluruh Peserta yang Telah Diverifikasi Guru</option>
+                        </select>
+                    </div>
+
+                    <div class="pt-4">
+                        <button onclick="saveExamSettings()" class="gold-button px-6 py-2.5 rounded-xl font-bold text-sm">
+                            <i class="fa-solid fa-floppy-disk mr-1.5"></i> Simpan Pengaturan
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB 4: KUNCI & PEMBAHASAN -->
+            <div id="guru-tab-kunci" class="hidden space-y-4">
+                <div class="bg-navy-950 border border-gold-600/30 rounded-2xl p-6 text-white space-y-4">
+                    <h4 class="font-cinzel text-lg font-bold text-gold-400 border-b border-slate-800 pb-2">Kunci Jawaban & Pembahasan HOTS (Dokumen Rahasia Guru)</h4>
+                    <div class="space-y-4 text-xs" id="container-kunci-pembahasan">
+                        <!-- Populated dynamically -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== 7. PAGE: SERTIFIKAT HASIL ASESMEN ==================== -->
+        <section id="page-sertifikat-search" class="hidden max-w-xl mx-auto animate-fadeIn">
+            <div class="parchment-card rounded-2xl p-6 md:p-8 border-2 border-gold-600/40 shadow-2xl text-center">
+                <div class="w-12 h-12 bg-navy-900 text-gold-400 rounded-full flex items-center justify-center mx-auto mb-3 text-xl font-bold">
+                    <i class="fa-solid fa-award"></i>
+                </div>
+                <h3 class="font-cinzel text-2xl font-bold text-navy-900">Pencarian Sertifikat Hasil</h3>
+                <p class="text-xs text-slate-600 mt-1 mb-6">Masukkan Nomor Peserta / NIS untuk melihat sertifikat terverifikasi.</p>
+
+                <div class="space-y-4">
+                    <input type="text" id="cert-search-nis" placeholder="Masukkan NIS / Nomor Peserta..." 
+                        class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-gold-500 text-center font-bold text-sm">
+                    <button onclick="searchCertificate()" class="gold-button w-full py-3 rounded-xl font-bold text-sm shadow-md">
+                        <i class="fa-solid fa-magnifying-glass mr-1.5"></i> Cari Sertifikat
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- VIEW CERTIFICATE MODAL / VIEW AREA -->
+        <section id="page-sertifikat-view" class="hidden animate-fadeIn">
+            <div class="no-print mb-4 flex justify-between items-center max-w-4xl mx-auto">
+                <button onclick="switchPage('beranda')" class="bg-slate-700 text-white text-xs px-4 py-2 rounded-lg font-semibold hover:bg-slate-600">
+                    <i class="fa-solid fa-arrow-left mr-1"></i> Kembali
+                </button>
+                <div class="space-x-2">
+                    <button onclick="window.print()" class="gold-button text-xs px-5 py-2 rounded-lg font-bold shadow-md">
+                        <i class="fa-solid fa-print mr-1"></i> Cetak / Simpan PDF
+                    </button>
+                </div>
+            </div>
+
+            <!-- ELEGANT PRINTABLE CERTIFICATE CARD -->
+            <div id="certificate-print-area" class="max-w-4xl mx-auto bg-parchment p-8 md:p-12 border-8 border-double border-gold-700 shadow-2xl rounded-sm relative text-center text-slate-900 font-serif my-4">
+                <!-- Inner Decorative Border Frame -->
+                <div class="border-2 border-gold-600/50 p-6 md:p-8 relative">
+                    <!-- Corner Ornaments -->
+                    <div class="absolute -top-3 -left-3 text-gold-700 text-2xl font-cinzel">❖</div>
+                    <div class="absolute -top-3 -right-3 text-gold-700 text-2xl font-cinzel">❖</div>
+                    <div class="absolute -bottom-3 -left-3 text-gold-700 text-2xl font-cinzel">❖</div>
+                    <div class="absolute -bottom-3 -right-3 text-gold-700 text-2xl font-cinzel">❖</div>
+
+                    <!-- Header -->
+                    <div class="text-xs uppercase tracking-widest font-sans font-bold text-amber-900 mb-1">
+                        SMAS AL-HILAAL TEHORU • KABUPATEN MALUKU TENGAH
+                    </div>
+                    <h2 class="font-cinzel text-2xl md:text-4xl font-extrabold text-navy-900 tracking-wide my-2">
+                        SERTIFIKAT HASIL ASESMEN SEJARAH
+                    </h2>
+                    <div class="text-xs text-amber-800 font-sans font-semibold mb-6">
+                        Nomor Registrasi: <span id="cert-out-no" class="font-mono">SAS-SEJ-2026-XXXXX</span>
+                    </div>
+
+                    <p class="text-xs md:text-sm italic text-slate-700 mb-4">Dengan ini menerangkan bahwa peserta didik:</p>
+
+                    <!-- Student Name -->
+                    <div class="font-cinzel text-2xl md:text-3xl font-extrabold text-navy-950 underline decoration-gold-600 decoration-2 underline-offset-8 mb-4" id="cert-out-nama">
+                        NAMA PESERTA DIDIK
+                    </div>
+                    <div class="text-xs font-sans text-slate-600 mb-6">
+                        NIS: <span id="cert-out-nis" class="font-bold">00000</span> | Kelas: <span id="cert-out-kelas" class="font-bold">XI</span>
+                    </div>
+
+                    <p class="text-xs md:text-sm text-slate-800 max-w-2xl mx-auto leading-relaxed mb-6 font-sans">
+                        Telah menyelesaikan <strong>Asesmen Sumatif Akhir Semester (SAS) Sejarah XI</strong> pada materi <em>Konsep Dasar Ilmu Sejarah (Sumber Sejarah, Kritik, Interpretasi & Rekonstruksi HOTS)</em> dengan pencapaian nilai sebagai berikut:
+                    </p>
+
+                    <!-- Score Badge -->
+                    <div class="inline-block bg-navy-950 text-gold-400 border-2 border-gold-600 px-8 py-3 rounded-xl mb-8 shadow-md">
+                        <div class="text-[10px] uppercase tracking-wider text-slate-300 font-sans font-bold">Nilai Akhir Asesmen</div>
+                        <div class="text-4xl font-black font-sans my-0.5" id="cert-out-nilai">00</div>
+                        <div class="text-[11px] italic font-serif text-amber-200" id="cert-out-predikat">Predikat: -</div>
+                    </div>
+
+                    <!-- Signatures Area -->
+                    <div class="grid grid-cols-2 gap-8 text-xs font-sans mt-6 pt-6 border-t border-amber-900/20">
+                        <div class="text-left">
+                            <p class="text-slate-500 text-[10px]">Verifikasi Sistem & Sekolah</p>
+                            <p class="font-bold text-navy-900 mt-1">SMAS Al-Hilaal Tehoru</p>
+                            <div class="h-14 flex items-center">
+                                <span class="inline-block border border-emerald-600 text-emerald-700 text-[9px] font-bold px-2 py-1 rounded uppercase tracking-wider">
+                                    ✓ TERVERIFIKASI DIGITAL
+                                </span>
+                            </div>
+                            <p class="text-[10px] text-slate-500">Tehoru, Maluku Tengah</p>
+                        </div>
+
+                        <div class="text-right">
+                            <p class="text-slate-600">Tehoru, <span id="cert-out-tanggal">31 Oktober 2026</span></p>
+                            <p class="font-semibold text-navy-900">Guru Mata Pelajaran Sejarah,</p>
+                            <div class="h-14 flex items-center justify-end">
+                                <span class="font-serif italic font-bold text-lg text-navy-900 border-b border-navy-900 px-4">
+                                    Acifah Hatapayo, S.Pd., Gr.
+                                </span>
+                            </div>
+                            <p class="text-[10px] text-slate-500">NIP / ID Guru: SMAS-ALH-SEJ</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="no-print bg-navy-950 border-t border-gold-600/20 text-slate-400 text-xs py-4 px-4 text-center mt-10">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-2">
+            <div>
+                © 2026 <strong>SMAS Al-Hilaal Tehoru</strong> • Asesmen SAS Sejarah XI (Fase F)
+            </div>
+            <div>
+                Pengembang Media: <strong>Acifah Hatapayo, S.Pd., Gr.</strong>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODAL: LOGIN GURU -->
+    <div id="modal-guru-auth" class="fixed inset-0 bg-black/70 backdrop-blur-sm hidden items-center justify-center z-50 p-4">
+        <div class="parchment-card rounded-2xl p-6 max-w-sm w-full border-2 border-gold-600/40 shadow-2xl">
+            <div class="text-center mb-4">
+                <div class="w-12 h-12 bg-navy-950 text-gold-400 rounded-full flex items-center justify-center mx-auto mb-2 text-xl">
+                    <i class="fa-solid fa-user-shield"></i>
+                </div>
+                <h4 class="font-cinzel text-xl font-bold text-navy-900">Autentikasi Guru</h4>
+                <p class="text-xs text-slate-600">Masukkan kata sandi untuk mengakses dashboard.</p>
+            </div>
+            <form onsubmit="handleGuruLogin(event)" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-bold uppercase text-slate-700 mb-1">Kata Sandi Guru</label>
+                    <input type="password" id="input-password-guru" required placeholder="Default: acifah2026" 
+                        class="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-gold-500 text-sm">
+                </div>
+                <div id="auth-error-msg" class="text-xs text-rose-600 font-bold hidden text-center">
+                    Kata sandi salah! Coba: acifah2026
+                </div>
+                <div class="flex gap-2">
+                    <button type="button" onclick="closeGuruAuthModal()" class="w-1/2 py-2.5 rounded-lg border border-slate-300 font-semibold text-slate-700 text-xs">
+                        Batal
+                    </button>
+                    <button type="submit" class="w-1/2 gold-button py-2.5 rounded-lg font-bold text-xs shadow-md">
+                        Masuk Dashboard
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- MODAL: KOREKSI ESAI SISWA (RUBRIK) -->
+    <div id="modal-grade-essay" class="fixed inset-0 bg-black/70 backdrop-blur-sm hidden items-center justify-center z-50 p-4 overflow-y-auto">
+        <div class="parchment-card rounded-2xl p-6 max-w-3xl w-full border-2 border-gold-600/40 shadow-2xl my-8 max-h-[90vh] overflow-y-auto">
+            <div class="flex justify-between items-center border-b border-amber-900/20 pb-3 mb-4">
+                <div>
+                    <h4 class="font-cinzel text-lg font-bold text-navy-900">Pemeriksaan & Penilaian Rubrik Esai</h4>
+                    <p class="text-xs text-slate-600" id="modal-essay-student-info">Peserta: -</p>
+                </div>
+                <button onclick="closeGradeEssayModal()" class="text-slate-500 hover:text-slate-800 text-lg"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+
+            <div id="modal-essay-content" class="space-y-6 text-xs">
+                <!-- Dynamically populated 5 essays & rubrics -->
+            </div>
+
+            <div class="mt-6 pt-4 border-t border-amber-900/20 flex justify-end gap-3">
+                <button onclick="closeGradeEssayModal()" class="px-4 py-2 rounded-lg border border-slate-300 font-semibold text-slate-700">
+                    Batal
+                </button>
+                <button onclick="saveEssayGrading()" class="gold-button px-6 py-2 rounded-lg font-bold">
+                    <i class="fa-solid fa-circle-check mr-1.5"></i> Sahkan & Simpan Nilai
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT APPLICATION LOGIC -->
+    <script>
+        /* ==================== 1. DATA BANK SOAL HOTS (20 PG + 5 ESAI) ==================== */
+        const QUESTION_BANK_PG = [
+            {
+                id: 1,
+                type: "C4 (Menganalisis)",
+                question: "Seorang peserta didik meneliti sejarah berdirinya sebuah sekolah. Ia menemukan surat keputusan pendirian sekolah yang dibuat pada tahun berdirinya sekolah tersebut. Dalam penelitian mengenai tanggal pendirian sekolah, dokumen itu paling tepat diperlakukan sebagai ....",
+                options: [
+                    "A. Sumber sekunder karena berbentuk dokumen tertulis",
+                    "B. Sumber primer karena berasal dari masa peristiwa yang diteliti",
+                    "C. Sumber tersier karena digunakan dalam penelitian",
+                    "D. Sumber lisan karena memuat informasi manusia",
+                    "E. Sumber fiksi karena dibuat oleh lembaga"
+                ],
+                key: "B",
+                discussion: "Surat keputusan yang dibuat sezaman dengan peristiwa pendirian merupakan kesaksian langsung dari pelaku/lembaga saat peristiwa terjadi (sumber primer)."
+            },
+            {
+                id: 2,
+                type: "C5 (Mengevaluasi)",
+                question: "Dua orang narasumber memberikan tanggal berbeda mengenai sebuah peristiwa lokal. Keduanya mengaku menyaksikan peristiwa tersebut. Tindakan peneliti yang paling tepat adalah ....",
+                options: [
+                    "A. Memilih narasumber yang lebih tua tanpa pemeriksaan",
+                    "B. Menggunakan kesaksian yang paling mudah diterima",
+                    "C. Mengabaikan kedua narasumber dan menghentikan penelitian",
+                    "D. Membandingkan kesaksian dengan dokumen dan sumber lain serta memeriksa konteks ingatan mereka",
+                    "E. Menggabungkan kedua tanggal menjadi tanggal baru"
+                ],
+                key: "D",
+                discussion: "Kritik internal/triangulasi mewajibkan peneliti membandingkan antar-kesaksian dengan arsip lain untuk menguji keandalan ingatan narasumber."
+            },
+            {
+                id: 3,
+                type: "C4 (Menganalisis)",
+                question: "Seorang peneliti menemukan surat yang diklaim berasal dari tahun 1945. Namun, jenis kertas dan format penulisannya diduga baru digunakan beberapa dekade kemudian. Pemeriksaan yang paling relevan adalah ....",
+                options: [
+                    "A. Menghitung jumlah paragraf surat",
+                    "B. Mengukur panjang cerita dalam surat",
+                    "C. Memeriksa keaslian fisik, bahan, tulisan, dan asal-usul dokumen",
+                    "D. Menilai apakah cerita surat menarik",
+                    "E. Membandingkan pendapat pembaca modern"
+                ],
+                key: "C",
+                discussion: "Pemeriksaan terhadap keaslian fisik dokumen (kertas, tinta, gaya tulisan) merupakan inti dari Kritik Eksternal."
+            },
+            {
+                id: 4,
+                type: "C4 (Menganalisis)",
+                question: "Sebuah laporan resmi menyatakan bahwa sebuah demonstrasi berlangsung damai. Surat pribadi dari seorang peserta menyebutkan adanya bentrokan. Untuk menilai perbedaan informasi tersebut, peneliti sebaiknya ....",
+                options: [
+                    "A. Langsung menolak laporan resmi",
+                    "B. Langsung menerima surat pribadi",
+                    "C. Memilih sumber yang paling panjang",
+                    "D. Menganggap semua sumber pasti salah",
+                    "E. Menganalisis konteks, tujuan, sudut pandang, isi, dan kesesuaian kedua sumber dengan bukti lain"
+                ],
+                key: "E",
+                discussion: "Kritik internal mengevaluasi bias, perspektif penulis, dan kepentingan laporan resmi vs catatan pribadi."
+            },
+            {
+                id: 5,
+                type: "C4 (Menganalisis)",
+                question: "Penelitian mengenai sejarah perdagangan di sebuah pelabuhan menggunakan buku sejarah modern, foto pelabuhan dari masa yang diteliti, dan wawancara dengan seorang saksi yang bekerja di sana pada masa tersebut. Pernyataan yang paling tepat adalah ....",
+                options: [
+                    "A. Semua sumber pasti merupakan sumber sekunder",
+                    "B. Buku sejarah modern dapat menjadi sumber sekunder, sedangkan foto dan kesaksian dapat menjadi sumber primer bergantung pada konteks penelitian",
+                    "C. Foto selalu menjadi sumber sekunder",
+                    "D. Wawancara tidak dapat digunakan dalam penelitian sejarah",
+                    "E. Buku modern selalu lebih akurat daripada sumber sezaman"
+                ],
+                key: "B",
+                discussion: "Kedudukan sumber ditentukan oleh kedekatannya dengan peristiwa dan tujuan pertanyaan penelitian."
+            },
+            {
+                id: 6,
+                type: "C5 (Mengevaluasi)",
+                question: "Sebuah unggahan media sosial menyatakan bahwa suatu peristiwa sejarah terjadi pada tanggal tertentu, tetapi tidak menyertakan referensi. Seorang peserta didik hendak menggunakan informasi tersebut dalam tugas sejarah. Langkah terbaik adalah ....",
+                options: [
+                    "A. Mengutip unggahan karena telah dibagikan banyak orang",
+                    "B. Menggunakan tanggal yang paling populer",
+                    "C. Menyalin informasi dari komentar pengguna",
+                    "D. Menelusuri sumber asal, memeriksa referensi, dan membandingkannya dengan sumber tepercaya",
+                    "E. Menganggap semua informasi digital tidak berguna"
+                ],
+                key: "D",
+                discussion: "Literasi digital sejarah menuntut verifikasi rujukan awal sebelum klaim historis diterima sebagai fakta."
+            },
+            {
+                id: 7,
+                type: "C4 (Menganalisis)",
+                question: "Seorang peneliti mewawancarai seorang saksi berusia lanjut tentang perubahan kehidupan masyarakat. Kesaksian itu dibuat puluhan tahun setelah peristiwa berlangsung. Keterbatasan utama yang harus diperhatikan adalah ....",
+                options: [
+                    "A. Ingatan dapat berubah atau dipengaruhi pengalaman setelah peristiwa",
+                    "B. Semua saksi lanjut usia pasti tidak dapat dipercaya",
+                    "C. Sumber lisan tidak mempunyai nilai sejarah",
+                    "D. Wawancara selalu merupakan sumber sekunder",
+                    "E. Kesaksian lisan tidak dapat dibandingkan dengan dokumen"
+                ],
+                key: "A",
+                discussion: "Daya ingat manusia mengalami pengikis waktu (memory distortion/hindsight bias) setelah kurun waktu panjang."
+            },
+            {
+                id: 8,
+                type: "C5 (Mengevaluasi)",
+                question: "Peneliti menemukan tiga bukti tentang kebakaran sebuah bangunan: laporan pemadam kebakaran, foto kerusakan, dan surat seorang warga. Ketiganya memberikan informasi berbeda mengenai penyebab kebakaran. Kesimpulan paling bertanggung jawab adalah ....",
+                options: [
+                    "A. Memilih penyebab dari laporan yang paling singkat",
+                    "B. Menganggap foto dapat menjelaskan seluruh penyebab",
+                    "C. Membandingkan informasi, memeriksa konteks setiap sumber, dan menyatakan batas kepastian kesimpulan",
+                    "D. Menggunakan surat warga sebagai satu-satunya bukti",
+                    "E. Menentukan penyebab berdasarkan dugaan pribadi"
+                ],
+                key: "C",
+                discussion: "Peneliti sejati tidak memaksakan klaim mutlak apabila bukti yang ada memiliki batasan kesaksian."
+            },
+            {
+                id: 9,
+                type: "C4 (Menganalisis)",
+                question: "Seorang peserta didik ingin mengetahui bagaimana perubahan kebijakan sekolah memengaruhi kehidupan siswa selama dua puluh tahun. Jenis bukti yang paling sesuai adalah ....",
+                options: [
+                    "A. Satu foto terbaru tanpa informasi tambahan",
+                    "B. Cerita fiksi tentang kehidupan siswa",
+                    "C. Pendapat seorang siswa yang tidak mengetahui masa sebelumnya",
+                    "D. Daftar nama siswa pada satu tahun saja",
+                    "E. Dokumen kebijakan dari beberapa periode, arsip sekolah, wawancara, dan bukti pendukung lain"
+                ],
+                key: "E",
+                discussion: "Studi perubahan longitudinal membutuhkan keberagaman sumber lintas periode (arsip + kesaksian)."
+            },
+            {
+                id: 10,
+                type: "C5 (Mengevaluasi)",
+                question: "Dua sumber menunjukkan bahwa jumlah penduduk sebuah kota meningkat pada periode tertentu. Namun, sumber tersebut berbeda dalam menjelaskan penyebabnya. Apa tindakan peneliti yang paling tepat?",
+                options: [
+                    "A. Menganggap peningkatan penduduk tidak pernah terjadi",
+                    "B. Memisahkan fakta yang didukung bukti dari penjelasan penyebab, kemudian menguji beberapa kemungkinan",
+                    "C. Memilih penjelasan yang paling menarik",
+                    "D. Menghapus sumber yang tidak sependapat",
+                    "E. Menganggap dua sumber pasti memberikan penyebab yang sama"
+                ],
+                key: "B",
+                discussion: "Peneliti memisahkan fakta keras (data demografi) dari hipotesis/interpretasi penyebab yang beragam."
+            },
+            {
+                id: 11,
+                type: "C4 (Menganalisis)",
+                question: "Sebuah foto lama memperlihatkan banyak orang berkumpul di depan gedung. Seorang peneliti ingin menyimpulkan bahwa foto tersebut menunjukkan demonstrasi politik. Langkah terbaik adalah ....",
+                options: [
+                    "A. Langsung menetapkan bahwa foto menunjukkan demonstrasi",
+                    "B. Menggunakan warna foto sebagai satu-satunya bukti",
+                    "C. Menentukan peristiwa berdasarkan pakaian seseorang saja",
+                    "D. Memeriksa keterangan foto, tanggal, lokasi, asal-usul, dan sumber pembanding",
+                    "E. Menganggap foto tidak dapat digunakan sebagai sumber sejarah"
+                ],
+                key: "D",
+                discussion: "Sumber visual membutuhkan identifikasi konteks (kontekstualisasi) dan sumber pembanding agar tidak salah interpretasi."
+            },
+            {
+                id: 12,
+                type: "C4 (Menganalisis)",
+                question: "Sebuah artefak ditemukan di wilayah pesisir. Peneliti ingin mengetahui fungsi dan masa penggunaannya. Bukti tambahan yang paling berguna adalah ....",
+                options: [
+                    "A. Konteks penemuan, analisis bahan, perbandingan artefak sejenis, dan bukti arkeologis",
+                    "B. Pendapat tanpa dasar dari pengunjung museum",
+                    "C. Warna artefak saja",
+                    "D. Cerita populer tanpa sumber",
+                    "E. Harga artefak di pasar barang antik"
+                ],
+                key: "A",
+                discussion: "Analisis sumber benda bergantung pada pertanggalan bahan, konteks stratigrafi, dan tipologi artefak sejenis."
+            },
+            {
+                id: 13,
+                type: "C5 (Mengevaluasi)",
+                question: "Sebuah laporan dibuat oleh pejabat yang terlibat langsung dalam konflik. Laporan tersebut menggambarkan kelompoknya sebagai pihak yang selalu benar. Sikap peneliti yang tepat adalah ....",
+                options: [
+                    "A. Membuang laporan tanpa membaca isinya",
+                    "B. Menganggap laporan pasti benar karena dibuat pejabat",
+                    "C. Mengidentifikasi kepentingan dan sudut pandang penulis serta membandingkannya dengan bukti independen",
+                    "D. Menganggap seluruh isi laporan palsu",
+                    "E. Menggunakan hanya bagian yang mendukung pendapat peneliti"
+                ],
+                key: "C",
+                discussion: "Menyadari adanya bias kepentingan (subjektivitas) dan melakukan kritik internal secara obyektif."
+            },
+            {
+                id: 14,
+                type: "C4 (Menganalisis)",
+                question: "Peserta didik telah mengumpulkan surat lama dan mewawancarai beberapa warga. Ia kemudian memeriksa keaslian surat, menilai kredibilitas kesaksian, dan membandingkan informasi. Tahap yang sedang dilakukannya adalah ....",
+                options: [
+                    "A. Historiografi saja",
+                    "B. Periodisasi",
+                    "C. Heuristik",
+                    "D. Penentuan topik",
+                    "E. Kritik atau verifikasi sumber"
+                ],
+                key: "E",
+                discussion: "Pemeriksaan keaslian dan kredibilitas data setelah tahap heuristik (pengumpulan) dinamakan verifikasi/kritik."
+            },
+            {
+                id: 15,
+                type: "C5 (Mengevaluasi)",
+                question: "Penelitian mengenai sejarah sebuah desa tidak menemukan dokumen tertulis yang memadai. Pendekatan yang paling dapat dipertanggungjawabkan adalah ....",
+                options: [
+                    "A. Mengarang peristiwa yang dianggap mungkin terjadi",
+                    "B. Menggunakan wawancara, tradisi lisan, benda, dan sumber lain yang relevan dengan kritik serta verifikasi",
+                    "C. Menghentikan semua penelitian sejarah desa",
+                    "D. Menyalin cerita dari media sosial tanpa pemeriksaan",
+                    "E. Menyatakan bahwa desa tersebut tidak memiliki sejarah"
+                ],
+                key: "B",
+                discussion: "Sejarah lisan dan artefak merupakan jalur valid dalam merekonstruksi sejarah lokal yang minim arsip."
+            },
+            {
+                id: 16,
+                type: "C4 (Menganalisis)",
+                question: "Perhatikan pernyataan berikut:\n(1) Sebuah surat bertanggal 12 Mei 1950 ditemukan di arsip.\n(2) Surat itu menunjukkan bahwa pengirim ingin memengaruhi keputusan pemerintah.\n(3) Dokumen lain mencatat rapat pada 15 Mei 1950.\nPernyataan yang merupakan interpretasi adalah ....",
+                options: [
+                    "A. Hanya (1)",
+                    "B. Hanya (3)",
+                    "C. (1) dan (3)",
+                    "D. (2)",
+                    "E. Semua pernyataan pasti merupakan fakta yang telah terbukti"
+                ],
+                key: "D",
+                discussion: "Pernyataan (1) & (3) adalah fakta dokumen. Pernyataan (2) adalah interpretasi atas niat/motif pengirim surat."
+            },
+            {
+                id: 17,
+                type: "C5 (Mengevaluasi)",
+                question: "Untuk meneliti sejarah sebuah tradisi masyarakat, peneliti menggunakan wawancara tetua adat, catatan tertulis, dan dokumentasi foto. Tujuan utama membandingkan sumber-sumber tersebut adalah ....",
+                options: [
+                    "A. Memperkuat pengujian informasi melalui sumber dengan karakteristik berbeda",
+                    "B. Membuat seluruh sumber memiliki isi yang sama",
+                    "C. Menghilangkan semua perbedaan pendapat",
+                    "D. Menggantikan analisis dengan pengumpulan foto",
+                    "E. Membuktikan bahwa sumber tertulis selalu benar"
+                ],
+                key: "A",
+                discussion: "Triangulasi metoda dan sumber meningkatkan validitas dan akurasi analisis sejarah."
+            },
+            {
+                id: 18,
+                type: "C5 (Mengevaluasi)",
+                question: "Seorang narasumber meminta agar identitasnya tidak dipublikasikan ketika memberikan kesaksian sensitif. Peneliti sebaiknya ....",
+                options: [
+                    "A. Tetap memublikasikan nama karena penelitian harus terbuka",
+                    "B. Mengunggah rekaman tanpa persetujuan",
+                    "C. Menghormati kesepakatan, menjaga kerahasiaan, dan menjelaskan penggunaan informasi kepada narasumber",
+                    "D. Menghapus seluruh hasil penelitian tanpa pertimbangan",
+                    "E. Mengubah isi wawancara agar lebih menarik"
+                ],
+                key: "C",
+                discussion: "Etika penelitian sejarah mewajibkan perlindungan hak privasi (anonymity/informed consent) narasumber."
+            },
+            {
+                id: 19,
+                type: "C6 (Mencipta)",
+                question: "Seorang peserta didik tertarik meneliti perubahan mata pencaharian masyarakat pesisir selama tiga puluh tahun. Rumusan masalah yang paling produktif adalah ....",
+                options: [
+                    "A. Apakah masyarakat pesisir menarik?",
+                    "B. Mengapa semua masyarakat pesisir selalu berubah?",
+                    "C. Siapa masyarakat pesisir?",
+                    "D. Apakah sejarah itu penting?",
+                    "E. Bagaimana perubahan mata pencaharian masyarakat pesisir selama tiga puluh tahun terakhir, dan faktor apa yang didukung bukti sebagai penyebabnya?"
+                ],
+                key: "E",
+                discussion: "Rumusan masalah HOTS bernilai analitis, memiliki batasan ruang & waktu, serta menuntut penjelasan kausalitas berdasar bukti."
+            },
+            {
+                id: 20,
+                type: "C5 (Mengevaluasi)",
+                question: "Setelah membaca satu artikel tanpa referensi, seorang peserta didik menyimpulkan bahwa satu tokoh merupakan satu-satunya penyebab perubahan besar dalam masyarakat. Penilaian paling tepat terhadap kesimpulan itu adalah ....",
+                options: [
+                    "A. Benar karena tokoh terkenal pasti menentukan seluruh sejarah",
+                    "B. Belum memadai karena perlu bukti yang dapat diverifikasi dan analisis terhadap faktor lain",
+                    "C. Benar jika artikelnya ditulis dengan bahasa akademik",
+                    "D. Tidak perlu diperiksa apabila sesuai pendapat mayoritas",
+                    "E. Benar apabila artikel tersebut panjang"
+                ],
+                key: "B",
+                discussion: "Kesimpulan sejarah yang ilmiah menghindari determinisme tunggal (mono-causality) tanpa bukti pembanding."
+            }
+        ];
+
+        const QUESTION_BANK_ESSAY = [
+            {
+                id: 21,
+                title: "Esai 1 — Analisis Sumber Sejarah (C4)",
+                prompt: "Seorang peserta didik meneliti sejarah berdirinya sebuah sekolah dan menemukan tiga sumber:\n- Surat keputusan pendirian sekolah.\n- Wawancara dengan seorang mantan guru.\n- Artikel peringatan hari jadi sekolah yang diterbitkan beberapa puluh tahun kemudian.\n\nAnalisis kedudukan ketiga sumber tersebut, informasi yang mungkin diperoleh, serta keterbatasannya. Jelaskan bagaimana ketiganya dapat digunakan secara bersama-sama."
+            },
+            {
+                id: 22,
+                title: "Esai 2 — Evaluasi Kredibilitas Sumber (C5)",
+                prompt: "Dua dokumen memberikan penjelasan berbeda mengenai penyebab suatu peristiwa sejarah. Dokumen pertama dibuat oleh pejabat yang terlibat langsung, sedangkan dokumen kedua ditulis oleh peneliti beberapa dekade kemudian.\n\nEvaluasilah kelebihan dan keterbatasan kedua dokumen tersebut. Rancang langkah-langkah untuk menentukan kesimpulan yang paling dapat dipertanggungjawabkan."
+            },
+            {
+                id: 23,
+                title: "Esai 3 — Kritik Sumber dan Bias (C5)",
+                prompt: "Sebuah unggahan digital menyebutkan bahwa sebuah bangunan bersejarah didirikan pada tahun tertentu. Unggahan itu tidak mencantumkan sumber. Sebuah papan informasi di lokasi menyebutkan tahun berbeda, sementara seorang warga memiliki cerita yang tidak sama.\n\nSusun prosedur verifikasi yang sistematis untuk menguji ketiga informasi tersebut. Jelaskan mengapa informasi yang paling populer belum tentu paling benar."
+            },
+            {
+                id: 24,
+                title: "Esai 4 — Merancang Penelitian Sejarah Lokal (C6)",
+                prompt: "Rancang sebuah penelitian sederhana tentang sejarah sekolah, desa, tradisi masyarakat, atau kehidupan masyarakat pesisir di sekitar Tehoru, Maluku.\n\nTuliskan:\n1. Judul penelitian.\n2. Rumusan masalah.\n3. Jenis sumber yang akan digunakan.\n4. Cara mengumpulkan sumber.\n5. Cara melakukan kritik dan verifikasi sumber.\n6. Cara menyusun kesimpulan berdasarkan bukti."
+            },
+            {
+                id: 25,
+                title: "Esai 5 — Rekonstruksi Berdasarkan Bukti (C5–C6)",
+                prompt: "Bayangkan Anda menemukan foto lama, satu surat, dan dua kesaksian lisan yang membahas peristiwa yang sama. Sebagian informasi saling mendukung, tetapi sebagian lainnya bertentangan.\n\nJelaskan bagaimana Anda akan:\n1. Menilai kredibilitas setiap sumber.\n2. Membedakan fakta, dugaan, dan interpretasi.\n3. Membandingkan bukti yang saling bertentangan.\n4. Menyusun narasi sejarah yang bertanggung jawab.\n5. Menjelaskan keterbatasan kesimpulan penelitian Anda."
+            }
+        ];
+
+        /* ==================== 2. APPLICATION STATE ==================== */
+        let state = {
+            activePage: 'beranda',
+            student: null, // { nama, nis, kelas, semester, tapel }
+            answersPG: {}, // { qId: 'A' }
+            answersEssay: {}, // { qId: 'text...' }
+            flagged: {}, // { qId: true/false }
+            currentQuestionIdx: 0, // 0..24
+            timerSeconds: 5400, // 90 mins
+            timerInterval: null,
+            examSettings: {
+                durasi: 90,
+                kkm: 75,
+                certRule: 'kkm'
+            },
+            currentGradingStudentNIS: null
+        };
+
+        // Simulated Database in LocalStorage
+        const STORAGE_KEY = 'SAS_SEJARAH_DATABASE_V1';
+
+        function getDB() {
+            const data = localStorage.getItem(STORAGE_KEY);
+            if (data) return JSON.parse(data);
+
+            // Pre-populated initial simulation data for immediate testing
+            const initialData = {
+                students: [
+                    {
+                        nama: "Muhammad Rizky",
+                        nis: "202611001",
+                        kelas: "XI IPA 1",
+                        semester: "Ganjil",
+                        tapel: "2026/2027",
+                        waktuSelesai: "31/10/2026, 09:30",
+                        answersPG: {1:"B",2:"D",3:"C",4:"E",5:"B",6:"D",7:"A",8:"C",9:"E",10:"B",11:"D",12:"A",13:"C",14:"E",15:"B",16:"D",17:"A",18:"C",19:"E",20:"B"},
+                        answersEssay: {
+                            21: "Surat SK pendirian adalah sumber primer resmi. Wawancara guru adalah sumber lisan primer. Artikel hari jadi adalah sumber sekunder.",
+                            22: "Dokumen pejabat memiliki kelebihan saksi mata tetapi berpotensi bias. Dokumen peneliti lebih obyektif tetapi merupakan analisa sekunder.",
+                            23: "Prosedur: 1. Cek arsip fisik dinas kebudayaan. 2. Lakukan uji fisik prasasti. 3. Bandingkan dengan sumber sezaman.",
+                            24: "Judul: Sejarah Perdagangan Tradisional Pesisir Tehoru. Rumusan masalah: Bagaimana perkembangan tradisi nelayan tehoru...",
+                            25: "Langkah: Triangulasi bukti, memisahkan fakta fisik foto dengan interpretasi lisan, lalu menyajikan kesimpulan obyektif."
+                        },
+                        skorPG: 60,
+                        essayGrades: { 21: [5,5,5,5], 22: [4,4,5,4], 23: [5,4,4,4], 24: [5,5,5,5], 25: [4,5,5,4] }, // total score: 35 font
+                        skorEssay: 35.2,
+                        nilaiAkhir: 95.2,
+                        verified: true,
+                        certNo: "SAS-SEJ-2026-88192"
+                    },
+                    {
+                        nama: "Siti Fatimah Latuconsina",
+                        nis: "202611002",
+                        kelas: "XI IPS 1",
+                        semester: "Ganjil",
+                        tapel: "2026/2027",
+                        waktuSelesai: "31/10/2026, 10:15",
+                        answersPG: {1:"B",2:"A",3:"C",4:"E",5:"B",6:"D",7:"A",8:"B",9:"E",10:"B",11:"D",12:"A",13:"C",14:"C",15:"B",16:"D",17:"A",18:"C",19:"E",20:"A"},
+                        answersEssay: {
+                            21: "SK adalah sumber primer. Wawancara sumber lisan.",
+                            22: "Pejabat bisa bias membela kelompoknya.",
+                            23: "Mengecek keaslian papan nama dan dokumen resmi.",
+                            24: "Judul: Perkembangan SMAS Al-Hilaal Tehoru.",
+                            25: "Menilai kredibilitas foto dan surat."
+                        },
+                        skorPG: 51,
+                        essayGrades: null,
+                        skorEssay: 0,
+                        nilaiAkhir: 51,
+                        verified: false,
+                        certNo: null
+                    }
+                ]
+            };
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(initialData));
+            return initialData;
+        }
+
+        function saveDB(db) {
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(db));
+        }
+
+        /* ==================== 3. PAGE NAVIGATION & MODALS ==================== */
+        function switchPage(pageId) {
+            state.activePage = pageId;
+            const pages = ['beranda', 'identitas', 'petunjuk', 'ujian', 'hasil', 'guru-dashboard', 'sertifikat-search', 'sertifikat-view'];
+            pages.forEach(p => {
+                const el = document.getElementById(`page-${p}`);
+                if (el) {
+                    if (p === pageId) el.classList.remove('hidden');
+                    else el.classList.add('hidden');
+                }
+            });
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            if (pageId === 'guru-dashboard') {
+                renderGuruDashboard();
+            }
+        }
+
+        function openGuruAuthModal() {
+            document.getElementById('modal-guru-auth').classList.remove('hidden');
+            document.getElementById('modal-guru-auth').classList.add('flex');
+            document.getElementById('input-password-guru').focus();
+        }
+
+        function closeGuruAuthModal() {
+            document.getElementById('modal-guru-auth').classList.add('hidden');
+            document.getElementById('modal-guru-auth').classList.remove('flex');
+            document.getElementById('auth-error-msg').classList.add('hidden');
+        }
+
+        function handleGuruLogin(e) {
+            e.preventDefault();
+            const pass = document.getElementById('input-password-guru').value;
+            if (pass === 'acifah2026' || pass === 'admin123') {
+                closeGuruAuthModal();
+                switchPage('guru-dashboard');
+            } else {
+                document.getElementById('auth-error-msg').classList.remove('hidden');
+            }
+        }
+
+        function logoutGuru() {
+            switchPage('beranda');
+        }
+
+        /* ==================== 4. EXAM ENGINE LOGIC ==================== */
+        function handleStartExam(e) {
+            e.preventDefault();
+            const nama = document.getElementById('input-nama').value.trim();
+            const nis = document.getElementById('input-nis').value.trim();
+            const kelas = document.getElementById('input-kelas').value;
+
+            if (!nama || !nis || !kelas) {
+                alert("Harap lengkapi semua bidang data peserta didik!");
+                return;
+            }
+
+            state.student = {
+                nama, nis, kelas,
+                semester: document.getElementById('input-semester').value,
+                tapel: document.getElementById('input-tapel').value
+            };
+
+            document.getElementById('exam-user-name').innerText = nama;
+            document.getElementById('exam-user-nis').innerText = `NIS: ${nis} (${kelas})`;
+
+            state.answersPG = {};
+            state.answersEssay = {};
+            state.flagged = {};
+            state.currentQuestionIdx = 0;
+            state.timerSeconds = state.examSettings.durasi * 60;
+
+            startExamTimer();
+            renderQuestionPalette();
+            renderCurrentQuestion();
+            switchPage('ujian');
+        }
+
+        function startExamTimer() {
+            if (state.timerInterval) clearInterval(state.timerInterval);
+            state.timerInterval = setInterval(() => {
+                state.timerSeconds--;
+                const m = Math.floor(state.timerSeconds / 60);
+                const s = state.timerSeconds % 60;
+                document.getElementById('exam-timer').innerText = 
+                    `${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
+
+                if (state.timerSeconds <= 300) {
+                    document.getElementById('exam-timer').classList.add('text-rose-500');
+                }
+
+                if (state.timerSeconds <= 0) {
+                    clearInterval(state.timerInterval);
+                    alert("Waktu ujian telah habis! Sistem akan mengumpulkan jawaban Anda otomatis.");
+                    submitFinalExam();
+                }
+            }, 1000);
+        }
+
+        function renderQuestionPalette() {
+            const pgContainer = document.getElementById('grid-pg-nav');
+            const essayContainer = document.getElementById('grid-essay-nav');
+            pgContainer.innerHTML = '';
+            essayContainer.innerHTML = '';
+
+            for (let i = 0; i < 25; i++) {
+                const qId = i < 20 ? QUESTION_BANK_PG[i].id : QUESTION_BANK_ESSAY[i - 20].id;
+                const btn = document.createElement('button');
+                btn.type = 'button';
+                btn.innerText = i + 1;
+                btn.onclick = () => jumpToQuestion(i);
+
+                // Styling logic based on status
+                let isAnswered = i < 20 ? !!state.answersPG[qId] : !!(state.answersEssay[qId] && state.answersEssay[qId].trim());
+                let isFlagged = !!state.flagged[qId];
+                let isCurrent = state.currentQuestionIdx === i;
+
+                let cls = "w-full h-8 rounded text-xs font-bold transition flex items-center justify-center border ";
+                if (isCurrent) {
+                    cls += "ring-2 ring-gold-400 border-gold-400 ";
+                }
+                
+                if (isFlagged) {
+                    cls += "bg-amber-500 text-navy-950 border-amber-600";
+                } else if (isAnswered) {
+                    cls += "bg-emerald-600 text-white border-emerald-700";
+                } else {
+                    cls += "bg-slate-800 text-slate-300 border-slate-700 hover:bg-slate-700";
+                }
+
+                btn.className = cls;
+                if (i < 20) pgContainer.appendChild(btn);
+                else essayContainer.appendChild(btn);
+            }
+        }
+
+        function renderCurrentQuestion() {
+            const idx = state.currentQuestionIdx;
+            const badgeNo = document.getElementById('question-number-badge');
+            const badgeType = document.getElementById('question-type-badge');
+            const qText = document.getElementById('question-text');
+            const ansContainer = document.getElementById('answers-container');
+            const chkFlag = document.getElementById('chk-flag-question');
+
+            badgeNo.innerText = `Soal Nomor ${idx + 1} / 25`;
+
+            if (idx < 20) {
+                // Multiple Choice Question
+                const q = QUESTION_BANK_PG[idx];
+                badgeType.innerText = `Pilihan Ganda (${q.type})`;
+                qText.innerText = q.question;
+                chkFlag.checked = !!state.flagged[q.id];
+
+                ansContainer.innerHTML = '';
+                q.options.forEach(opt => {
+                    const optKey = opt.charAt(0); // A, B, C, D, E
+                    const label = document.createElement('label');
+                    const isChecked = state.answersPG[q.id] === optKey;
+                    label.className = `flex items-start space-x-3 p-3.5 rounded-xl border transition cursor-pointer text-sm font-medium ${
+                        isChecked ? 'bg-amber-100/90 border-gold-600 text-navy-950 shadow-sm' : 'bg-white/80 border-amber-900/10 hover:bg-amber-50 text-slate-800'
+                    }`;
+
+                    label.innerHTML = `
+                        <input type="radio" name="pg_opt" value="${optKey}" ${isChecked ? 'checked' : ''} 
+                            onchange="selectPGOption(${q.id}, '${optKey}')" class="mt-0.5 text-gold-600 focus:ring-gold-500 w-4 h-4">
+                        <span>${opt}</span>
+                    `;
+                    ansContainer.appendChild(label);
+                });
+            } else {
+                // Essay Question
+                const q = QUESTION_BANK_ESSAY[idx - 20];
+                badgeType.innerText = `Soal Esai HOTS (Skor Maks 20)`;
+                qText.innerText = q.prompt;
+                chkFlag.checked = !!state.flagged[q.id];
+
+                const currentVal = state.answersEssay[q.id] || '';
+                ansContainer.innerHTML = `
+                    <div class="space-y-2">
+                        <label class="block text-xs font-bold text-slate-700 uppercase">Tuliskan Jawaban Analisis Anda secara Rinci:</label>
+                        <textarea rows="6" oninput="updateEssayAnswer(${q.id}, this.value)" 
+                            placeholder="Ketik jawaban Anda berbasis bukti, argumen yang logis, dan evaluasi sumber..."
+                            class="w-full p-4 rounded-xl border border-slate-300 focus:ring-2 focus:ring-gold-500 bg-white text-sm leading-relaxed">${currentVal}</textarea>
+                    </div>
+                `;
+            }
+
+            // Prev/Next Buttons disabled status
+            document.getElementById('btn-prev-question').disabled = idx === 0;
+            document.getElementById('btn-next-question').disabled = idx === 24;
+            renderQuestionPalette();
+        }
+
+        function selectPGOption(qId, val) {
+            state.answersPG[qId] = val;
+            renderQuestionPalette();
+            renderCurrentQuestion();
+        }
+
+        function updateEssayAnswer(qId, text) {
+            state.answersEssay[qId] = text;
+            renderQuestionPalette();
+        }
+
+        function toggleFlagCurrentQuestion() {
+            const idx = state.currentQuestionIdx;
+            const qId = idx < 20 ? QUESTION_BANK_PG[idx].id : QUESTION_BANK_ESSAY[idx - 20].id;
+            state.flagged[qId] = !state.flagged[qId];
+            renderQuestionPalette();
+        }
+
+        function navigateQuestion(direction) {
+            const newIdx = state.currentQuestionIdx + direction;
+            if (newIdx >= 0 && newIdx < 25) {
+                state.currentQuestionIdx = newIdx;
+                renderCurrentQuestion();
+            }
+        }
+
+        function jumpToQuestion(idx) {
+            state.currentQuestionIdx = idx;
+            renderCurrentQuestion();
+        }
+
+        function confirmFinishExam() {
+            let answeredPGCount = Object.keys(state.answersPG).length;
+            let answeredEssayCount = Object.values(state.answersEssay).filter(v => v && v.trim()).length;
+            let totalUnanswered = 25 - (answeredPGCount + answeredEssayCount);
+
+            let msg = `Apakah Anda yakin ingin mengakhiri dan mengumpulkan asesmen ini?\n\n• PG Dijawab: ${answeredPGCount} / 20\n• Esai Dijawab: ${answeredEssayCount} / 5`;
+            if (totalUnanswered > 0) {
+                msg += `\n\nPERHATIAN: Ada ${totalUnanswered} soal yang belum Anda isi!`;
+            }
+
+            if (confirm(msg)) {
+                submitFinalExam();
+            }
+        }
+
+        function submitFinalExam() {
+            if (state.timerInterval) clearInterval(state.timerInterval);
+
+            // 1. Calculate PG Score automatically
+            let pgCorrect = 0;
+            QUESTION_BANK_PG.forEach(q => {
+                if (state.answersPG[q.id] === q.key) {
+                    pgCorrect++;
+                }
+            });
+            let skorPG = pgCorrect * 3; // 20 * 3 = 60 max
+
+            // 2. Prepare Record
+            const nowStr = new Date().toLocaleString('id-ID');
+            const studentRecord = {
+                nama: state.student.nama,
+                nis: state.student.nis,
+                kelas: state.student.kelas,
+                semester: state.student.semester,
+                tapel: state.student.tapel,
+                waktuSelesai: nowStr,
+                answersPG: state.answersPG,
+                answersEssay: state.answersEssay,
+                skorPG: skorPG,
+                essayGrades: null, // Pending teacher review
+                skorEssay: 0,
+                nilaiAkhir: skorPG,
+                verified: false,
+                certNo: null
+            };
+
+            // 3. Save to Database
+            const db = getDB();
+            // remove existing if same NIS re-took
+            db.students = db.students.filter(s => s.nis !== studentRecord.nis);
+            db.students.push(studentRecord);
+            saveDB(db);
+
+            // 4. Show Result Page
+            document.getElementById('res-nama').innerText = studentRecord.nama;
+            document.getElementById('res-nis-kelas').innerText = `${studentRecord.nis} (${studentRecord.kelas})`;
+            document.getElementById('res-waktu').innerText = nowStr;
+            document.getElementById('res-skor-pg').innerText = `${skorPG} / 60`;
+            document.getElementById('res-status-esai').innerText = "Belum Diverifikasi Guru";
+            document.getElementById('res-skor-total').innerText = `${skorPG} (PG Only)`;
+
+            switchPage('hasil');
+        }
+
+        /* ==================== 5. TEACHER DASHBOARD LOGIC ==================== */
+        function renderGuruDashboard() {
+            const db = getDB();
+            document.getElementById('dash-total-siswa').innerText = db.students.length;
+
+            const tbody = document.getElementById('tbl-body-rekap');
+            tbody.innerHTML = '';
+
+            if (db.students.length === 0) {
+                tbody.innerHTML = `<tr><td colspan="8" class="p-6 text-center text-slate-400 italic">Belum ada data peserta yang mengumpulkan ujian.</td></tr>`;
+                return;
+            }
+
+            db.students.forEach((s, idx) => {
+                const tr = document.createElement('tr');
+                tr.className = "hover:bg-amber-50/50 transition";
+
+                const isVerified = s.verified;
+                const statusBadge = isVerified 
+                    ? `<span class="bg-emerald-100 text-emerald-800 text-[10px] font-bold px-2 py-1 rounded-full"><i class="fa-solid fa-check-circle mr-1"></i>Terverifikasi</span>`
+                    : `<span class="bg-amber-100 text-amber-800 text-[10px] font-bold px-2 py-1 rounded-full"><i class="fa-solid fa-clock mr-1"></i>Perlu Koreksi</span>`;
+
+                tr.innerHTML = `
+                    <td class="p-3 font-bold text-slate-500">${idx + 1}</td>
+                    <td class="p-3 font-semibold text-navy-900">${s.nama}</td>
+                    <td class="p-3 text-slate-600">${s.nis} <span class="text-slate-400">(${s.kelas})</span></td>
+                    <td class="p-3 text-center font-bold text-navy-900">${s.skorPG}</td>
+                    <td class="p-3 text-center font-bold ${s.skorEssay > 0 ? 'text-amber-700' : 'text-slate-400'}">${s.skorEssay ? s.skorEssay.toFixed(1) : '0'}</td>
+                    <td class="p-3 text-center font-black text-sm text-gold-700">${s.nilaiAkhir.toFixed(1)}</td>
+                    <td class="p-3 text-center">${statusBadge}</td>
+                    <td class="p-3 text-center space-x-1">
+                        <button onclick="openGradeEssayModal('${s.nis}')" class="bg-navy-900 hover:bg-navy-800 text-gold-300 text-[11px] font-bold px-3 py-1.5 rounded-md transition">
+                            <i class="fa-solid fa-pen-to-square mr-1"></i> Koreksi Esai
+                        </button>
+                        ${isVerified ? `
+                            <button onclick="viewStudentCertificate('${s.nis}')" class="bg-emerald-700 hover:bg-emerald-800 text-white text-[11px] font-bold px-2.5 py-1.5 rounded-md transition" title="Lihat Sertifikat">
+                                <i class="fa-solid fa-certificate"></i>
+                            </button>
+                        ` : ''}
+                    </td>
+                `;
+                tbody.appendChild(tr);
+            });
+
+            renderItemAnalysis();
+            renderKeyDiscussions();
+        }
+
+        function switchGuruTab(tabName) {
+            ['rekap', 'analisis', 'pengaturan', 'kunci'].forEach(t => {
+                const contentEl = document.getElementById(`guru-tab-${t}`);
+                const btnEl = document.getElementById(`tab-btn-${t}`);
+                if (t === tabName) {
+                    contentEl.classList.remove('hidden');
+                    btnEl.className = "px-4 py-2.5 font-bold rounded-t-lg bg-gold-600 text-white";
+                } else {
+                    contentEl.classList.add('hidden');
+                    btnEl.className = "px-4 py-2.5 font-semibold text-slate-300 hover:text-white";
+                }
+            });
+        }
+
+        /* Rubrik Penilaian Esai Modal */
+        function openGradeEssayModal(studentNIS) {
+            const db = getDB();
+            const s = db.students.find(st => st.nis === studentNIS);
+            if (!s) return;
+
+            state.currentGradingStudentNIS = studentNIS;
+            document.getElementById('modal-essay-student-info').innerText = `Peserta: ${s.nama} (${s.nis} - ${s.kelas})`;
+
+            const container = document.getElementById('modal-essay-content');
+            container.innerHTML = '';
+
+            QUESTION_BANK_ESSAY.forEach((q, idx) => {
+                const essayText = s.answersEssay && s.answersEssay[q.id] ? s.answersEssay[q.id] : '<em class="text-rose-600">Tidak menjawab</em>';
+                const currentScores = (s.essayGrades && s.essayGrades[q.id]) ? s.essayGrades[q.id] : [0,0,0,0];
+
+                const card = document.createElement('div');
+                card.className = "bg-white p-4 rounded-xl border border-slate-200 space-y-3";
+                card.innerHTML = `
+                    <div class="font-bold text-navy-900 border-b pb-1 text-sm">${q.title}</div>
+                    <div class="bg-amber-50/70 p-3 rounded-lg text-slate-800 text-xs italic">
+                        <strong>Pertanyaan:</strong> ${q.prompt.replace(/\n/g, '<br>')}
+                    </div>
+                    <div class="bg-slate-50 p-3 rounded-lg border border-slate-200 text-slate-900 text-xs leading-relaxed">
+                        <strong class="text-navy-900 block mb-1">Jawaban Peserta:</strong>
+                        ${essayText.replace(/\n/g, '<br>')}
+                    </div>
+
+                    <!-- Rubrik 4 Aspek (0-5 poin masing-masing) -->
+                    <div class="bg-slate-100/80 p-3 rounded-lg space-y-2 border border-slate-200 text-[11px]">
+                        <div class="font-bold uppercase text-slate-700 mb-1">Rubrik Penilaian HOTS (Skor 0 - 5 per Aspek):</div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                            <div>
+                                <label class="block text-slate-600 font-medium">1. Ketepatan Konsep & Pemahaman (0-5):</label>
+                                <input type="number" min="0" max="5" id="rubric_${q.id}_0" value="${currentScores[0]}" class="w-full p-1.5 border rounded bg-white font-bold text-slate-800">
+                            </div>
+                            <div>
+                                <label class="block text-slate-600 font-medium">2. Analisis & Evaluasi Sumber (0-5):</label>
+                                <input type="number" min="0" max="5" id="rubric_${q.id}_1" value="${currentScores[1]}" class="w-full p-1.5 border rounded bg-white font-bold text-slate-800">
+                            </div>
+                            <div>
+                                <label class="block text-slate-600 font-medium">3. Logika Penalaran & Bukti (0-5):</label>
+                                <input type="number" min="0" max="5" id="rubric_${q.id}_2" value="${currentScores[2]}" class="w-full p-1.5 border rounded bg-white font-bold text-slate-800">
+                            </div>
+                            <div>
+                                <label class="block text-slate-600 font-medium">4. Kesimpulan & Rekonstruksi (0-5):</label>
+                                <input type="number" min="0" max="5" id="rubric_${q.id}_3" value="${currentScores[3]}" class="w-full p-1.5 border rounded bg-white font-bold text-slate-800">
+                            </div>
+                        </div>
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+
+            document.getElementById('modal-grade-essay').classList.remove('hidden');
+            document.getElementById('modal-grade-essay').classList.add('flex');
+        }
+
+        function closeGradeEssayModal() {
+            document.getElementById('modal-grade-essay').classList.add('hidden');
+            document.getElementById('modal-grade-essay').classList.remove('flex');
+        }
+
+        function saveEssayGrading() {
+            const db = getDB();
+            const s = db.students.find(st => st.nis === state.currentGradingStudentNIS);
+            if (!s) return;
+
+            let totalRubricPoints = 0; // max 100 from 5 questions * 20 points
+            let essayGradesObj = {};
+
+            QUESTION_BANK_ESSAY.forEach(q => {
+                let r0 = Math.min(5, Math.max(0, parseInt(document.getElementById(`rubric_${q.id}_0`).value) || 0));
+                let r1 = Math.min(5, Math.max(0, parseInt(document.getElementById(`rubric_${q.id}_1`).value) || 0));
+                let r2 = Math.min(5, Math.max(0, parseInt(document.getElementById(`rubric_${q.id}_2`).value) || 0));
+                let r3 = Math.min(5, Math.max(0, parseInt(document.getElementById(`rubric_${q.id}_3`).value) || 0));
+
+                let sumQ = r0 + r1 + r2 + r3; // 0..20
+                essayGradesObj[q.id] = [r0, r1, r2, r3];
+                totalRubricPoints += sumQ;
+            });
+
+            // Conversion formula: (Total Rubric Points / 100) * 40 max essay score
+            let convertedEssayScore = (totalRubricPoints / 100) * 40;
+
+            s.essayGrades = essayGradesObj;
+            s.skorEssay = convertedEssayScore;
+            s.nilaiAkhir = s.skorPG + convertedEssayScore;
+            s.verified = true;
+
+            if (!s.certNo) {
+                const randomNo = Math.floor(10000 + Math.random() * 90000);
+                s.certNo = `SAS-SEJ-2026-${randomNo}`;
+            }
+
+            saveDB(db);
+            closeGradeEssayModal();
+            renderGuruDashboard();
+            alert(`Nilai esai untuk ${s.nama} berhasil disahkan! Nilai Akhir: ${s.nilaiAkhir.toFixed(1)}`);
+        }
+
+        /* Item Analysis Engine */
+        function renderItemAnalysis() {
+            const db = getDB();
+            if (db.students.length === 0) return;
+
+            let totalNilai = 0;
+            let tuntasCount = 0;
+            let qStats = {}; // { qId: correctCount }
+
+            QUESTION_BANK_PG.forEach(q => qStats[q.id] = 0);
+
+            db.students.forEach(s => {
+                totalNilai += s.nilaiAkhir;
+                if (s.nilaiAkhir >= state.examSettings.kkm) tuntasCount++;
+
+                QUESTION_BANK_PG.forEach(q => {
+                    if (s.answersPG && s.answersPG[q.id] === q.key) {
+                        qStats[q.id]++;
+                    }
+                });
+            });
+
+            const avg = totalNilai / db.students.length;
+            const pctTuntas = (tuntasCount / db.students.length) * 100;
+
+            document.getElementById('stat-rata-rata').innerText = avg.toFixed(1);
+            document.getElementById('stat-persen-tuntas').innerText = `${pctTuntas.toFixed(0)}%`;
+            document.getElementById('stat-kkm-lbl').innerText = state.examSettings.kkm;
+
+            // Find hardest question
+            let minCorrect = db.students.length + 1;
+            let hardestQId = 1;
+            Object.keys(qStats).forEach(qId => {
+                if (qStats[qId] < minCorrect) {
+                    minCorrect = qStats[qId];
+                    hardestQId = qId;
+                }
+            });
+            document.getElementById('stat-soal-tersulit').innerText = `Soal #${hardestQId}`;
+
+            // Render Bar Visuals
+            const container = document.getElementById('container-analisis-soal');
+            container.innerHTML = '';
+            QUESTION_BANK_PG.forEach(q => {
+                let correctCnt = qStats[q.id] || 0;
+                let pct = (correctCnt / db.students.length) * 100;
+
+                const row = document.createElement('div');
+                row.className = "flex items-center space-x-3";
+                row.innerHTML = `
+                    <span class="w-16 font-bold text-slate-300">Soal #${q.id}</span>
+                    <div class="flex-grow bg-slate-800 rounded-full h-3 overflow-hidden border border-slate-700">
+                        <div class="bg-gradient-to-r from-gold-600 to-emerald-500 h-full rounded-full" style="width: ${pct}%"></div>
+                    </div>
+                    <span class="w-16 text-right font-mono font-bold text-gold-400">${pct.toFixed(0)}% Benar</span>
+                `;
+                container.appendChild(row);
+            });
+        }
+
+        function renderKeyDiscussions() {
+            const container = document.getElementById('container-kunci-pembahasan');
+            container.innerHTML = '';
+            QUESTION_BANK_PG.forEach(q => {
+                const div = document.createElement('div');
+                div.className = "bg-slate-900 p-3 rounded-lg border border-slate-800";
+                div.innerHTML = `
+                    <div class="font-bold text-amber-300 mb-1">Soal #${q.id} (${q.type}) — Kunci: <span class="text-emerald-400">${q.key}</span></div>
+                    <div class="text-slate-300 mb-1">${q.question}</div>
+                    <div class="text-slate-400 italic text-[11px]"><strong class="text-gold-400">Pembahasan HOTS:</strong> ${q.discussion}</div>
+                `;
+                container.appendChild(div);
+            });
+        }
+
+        function saveExamSettings() {
+            state.examSettings.durasi = parseInt(document.getElementById('setting-durasi').value) || 90;
+            state.examSettings.kkm = parseInt(document.getElementById('setting-kkm').value) || 75;
+            state.examSettings.certRule = document.getElementById('setting-cert-rule').value;
+            document.getElementById('beranda-durasi-label').innerText = `${state.examSettings.durasi} Menit`;
+            alert("Pengaturan ujian berhasil diperbarui!");
+        }
+
+        function exportToCSV() {
+            const db = getDB();
+            if (db.students.length === 0) {
+                alert("Belum ada data untuk diekspor!");
+                return;
+            }
+
+            let csvContent = "data:text/csv;charset=utf-8,";
+            csvContent += "No,Nama Peserta,NIS,Kelas,Skor PG (60),Skor Esai (40),Nilai Akhir,Status Verifikasi,No Sertifikat\n";
+
+            db.students.forEach((s, idx) => {
+                csvContent += `${idx+1},"${s.nama}",${s.nis},"${s.kelas}",${s.skorPG},${s.skorEssay ? s.skorEssay.toFixed(1) : 0},${s.nilaiAkhir.toFixed(1)},"${s.verified ? 'Terverifikasi' : 'Belum'}",${s.certNo || '-'}\n`;
+            });
+
+            const encodedUri = encodeURI(csvContent);
+            const link = document.createElement("a");
+            link.setAttribute("href", encodedUri);
+            link.setAttribute("download", `Rekap_Nilai_SAS_Sejarah_XI_${new Date().toISOString().slice(0,10)}.csv`);
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+
+        /* ==================== 6. SERTIFIKAT GENERATOR ==================== */
+        function searchCertificate() {
+            const nis = document.getElementById('cert-search-nis').value.trim();
+            if (!nis) {
+                alert("Masukkan NIS / Nomor Peserta!");
+                return;
+            }
+            viewStudentCertificate(nis);
+        }
+
+        function viewStudentCertificate(nis) {
+            const db = getDB();
+            const s = db.students.find(st => st.nis === nis);
+
+            if (!s) {
+                alert(`Data hasil ujian untuk NIS ${nis} tidak ditemukan!`);
+                return;
+            }
+
+            if (!s.verified) {
+                alert(`Nilai untuk ${s.nama} belum diverifikasi oleh Ibu Acifah Hatapayo, S.Pd., Gr. Sertifikat belum dapat diterbitkan.`);
+                return;
+            }
+
+            if (state.examSettings.certRule === 'kkm' && s.nilaiAkhir < state.examSettings.kkm) {
+                alert(`Nilai akhir (${s.nilaiAkhir.toFixed(1)}) belum memenuhi ambang kelulusan KKM (${state.examSettings.kkm}). Sertifikat tidak dapat diterbitkan.`);
+                return;
+            }
+
+            // Populate Certificate
+            document.getElementById('cert-out-no').innerText = s.certNo || 'SAS-SEJ-2026-9901';
+            document.getElementById('cert-out-nama').innerText = s.nama.toUpperCase();
+            document.getElementById('cert-out-nis').innerText = s.nis;
+            document.getElementById('cert-out-kelas').innerText = s.kelas;
+            document.getElementById('cert-out-nilai').innerText = s.nilaiAkhir.toFixed(1);
+
+            let predikat = "Sangat Baik (A)";
+            if (s.nilaiAkhir < 75) predikat = "Cukup (C)";
+            else if (s.nilaiAkhir < 85) predikat = "Baik (B)";
+
+            document.getElementById('cert-out-predikat').innerText = `Predikat Pencapaian: ${predikat}`;
+
+            switchPage('sertifikat-view');
+        }
+
+        /* INITIALIZATION ON WINDOW LOAD */
+        window.onload = function() {
+            getDB(); // Initialize simulation data
+            switchPage('beranda');
+        };
+    </script>
+</body>
+</html>
